@@ -7,7 +7,7 @@ Netbox Prefixes and IP addresses are added for each VRF/VPC.
 
 Run without the commit flag to view the changes that will be made.
 
-** Installation
+## Installation
 
 Create a Python3 virtual environment
 ```
@@ -24,7 +24,7 @@ Install the requirements
 pip install -r requirements.txt
 ```
 
-** Usage
+## Usage
 
 ```
 usage: netbox_ipam.py [-h] [--commit] config_file
