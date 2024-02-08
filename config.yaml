@@ -3,7 +3,7 @@ aws:
   regions: ["eu-west-1"]
 
 netbox:
-  url: "http://192.168.10.55:8000"
+  url: "http://212.2.246.56:8080"
 
 secrets:
   path: "/etc/secret/"
