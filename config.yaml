@@ -3,7 +3,7 @@ aws:
   regions: ["eu-west-1"]
 
 netbox:
-  url: "http://netbox-civo.default.svc.cluster.local:8080"
+  url: "http://netbox-civo.default.svc.cluster.local"
 
 secrets:
   path: "/etc/secret/"
