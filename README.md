@@ -56,3 +56,37 @@ Secret directory should contain three files:
 aws_access_key    - Contains AWS access key
 aws_secret_key    - Contains AWS secret key
 netbox_api_token  - Contains NetBox API token
+
+## Run from Kriten
+
+Add the runner:
+```
+{
+    "branch": "main",
+    "gitURL": "https://github.com/evolvere-tech/netbox-aws-ipam.git",
+    "image": "evolvere/netbox-aws-ipam:v0.1",
+    "name": "netbox-aws-ipam-runner"
+}
+```
+
+Add the tasks:
+```
+ {
+     "command": "python netbox_ipam.py config.yaml --commit", 
+     "name": "netbox-aws-ipam-commit",
+     "runner": "netbox-aws-ipam-runner",
+     "synchronous": false,
+     "secret": {
+         "aws_access_key": "",
+         "aws_secret_key": "",
+         "netbox_api_token": ""
+     }
+ }
+```
+
+Add another task without the --commit flag to check without applying changes to netbox.
+
+## TODO
+Replace the config file with extra_vars sent to the job.
+
+
